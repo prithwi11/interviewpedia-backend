@@ -24,6 +24,8 @@ global.Helpers = new CommonFunction()
 
 let userManagement = require('./routes/Admin/userManagement')
 app.use('/api/v1/user', userManagement)
+let category = require('./routes/Admin/category')
+app.use('/api/v1/category', category)
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on http://localhost:${process.env.PORT}`)

@@ -37,7 +37,7 @@ class categoryModel extends Model {
                     type : DataTypes.DATE,
                     defaultValue : DataTypes.NOW,
                 },
-                updated_timestamps : {
+                updated_timestamp : {
                     type : DataTypes.DATE
                 }
             },

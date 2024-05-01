@@ -30,8 +30,14 @@ class categoryModel extends Model {
                     defaultValue : 0,
                 },
                 status : {
-                    type : DataTypes.INTEGER,
-                    defaultValue : 0,
+                    type : DataTypes.ENUM,
+                    values : ['active', 'inactive', 'deleted'],
+                    defaultValue : 'active',
+                },
+                is_delete : {
+                    type : DataTypes.ENUM,
+                    values : ['0', '1'],
+                    defaultValue : '0',
                 },
                 added_timestamp : {
                     type : DataTypes.DATE,

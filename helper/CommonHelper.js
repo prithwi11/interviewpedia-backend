@@ -706,6 +706,12 @@ const commonFunc = class CommonCls {
 			});
 		}
 	}
+
+	getCurrentDateTime = (format = "YYYY-MM-DD HH:mm:ss") => {
+		let moment = require('moment-timezone')
+		return moment(new Date()).format(format);
+	}
+
 	
     //get specific previous date : 
     prevSpecificDateFunction = (todayDate, count)=>{

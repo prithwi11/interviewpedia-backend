@@ -6,7 +6,7 @@ module.exports = class categoryController {
 
     getCategory = async(req, res) => {
         try {
-            const categoryObj = await this.categoryModelObj.findAllByAny({where : {is_delete : '0'}})
+            const categoryObj = await this.categoryModelObj.getCategoryListing()
             if (categoryObj.length > 0) {
                 global.Helpers.successStatusBuild(res, categoryObj)
             }
@@ -39,6 +39,19 @@ module.exports = class categoryController {
             else {
                 global.Helpers.badRequestStatusBuild(res, 'some error occurred!')    
             }
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, 'some error occurred!')
+        }
+    }
+
+    category_add_csv = async(req, res) => {
+        try {
+            const fileUploadHelper = require('../../../helper/FileUploadHelper')
+            const uploadFile = await fileUploadHelper.fileUpload(req)
+            console.log('uploadFile', uploadFile)
+            global.Helpers.successStatusBuild(res, 'File Uploaded successfully')
         }
         catch (e) {
             console.log(e)

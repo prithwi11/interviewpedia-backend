@@ -24,6 +24,12 @@ middlewares = [
 router.route('/category-add')
     .post(middlewares, this.categoryControllerObj.category_add)
 
+middlewares = [
+    commonMiddlewareObj.validateFormData,
+]
+router.route('/category-add-csv')
+    .post( this.categoryControllerObj.category_add_csv)
+
 
 middlewares = [
     categoryMiddlewareObj.editCategoryValidationRule(),

@@ -54,6 +54,19 @@ class categoryModel extends Model {
             }
         )
     }
+
+    getCategoryListing = async() => {
+        let sql = "SELECT c1.category_id, c1.category_name, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id"
+
+        return new Promise((resolve, reject) => {
+            this.connectionObj.sequelize.query(sql, {
+            }).then((data) => {
+                resolve(data);
+            }).catch(error => {
+                reject(error);
+            });
+        });
+    }
 }
 
 module.exports = categoryModel

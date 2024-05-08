@@ -1,0 +1,249 @@
+Request_type,Requiremnet_date,Ticket_no,Jobber_name,Process_name,Design,Colour,Ticket_status
+Material Requirement Request,2023-09-20 16:07:43,MR-20230920103743-11282,Sardar Enterprise,Stitching,MTJAC124,318-Orange,Open
+Material Requirement Request,2023-09-20 16:13:25,MR-20230920104325-11284,Sardar Enterprise,Stitching,MTJAC130,306-Dark Blue,Open
+Material Requirement Request,2023-09-20 16:49:15,MR-20230920111915-11287,Sardar Enterprise,Stitching,MTJAC128,304-Fawn,Open
+Material Requirement Request,2023-09-20 17:46:28,MR-20230920121628-11292,Sardar Enterprise,Stitching,JAC306,316-Dark Green,Open
+Material Requirement Request,2023-09-20 17:49:50,MR-20230920121950-11293,Sardar Enterprise,Stitching,JAC306,316-Dark Green,Open
+Material Requirement Request,2023-09-29 15:56:04,MR-20230929102604-11611,Sardar Enterprise,Stitching,JAC245,302-Cream,Open
+Material Requirement Request,2023-10-04 12:48:50,MR-20231004071850-11700,Sardar Enterprise,Stitching,MTJAC130,306-Dark Blue,Open
+Material Requirement Request,2023-10-09 12:57:03,MR-20231009072703-11850,Sardar Enterprise,Stitching,PCKID755,325-Rani,Open
+Material Requirement Request,2023-10-09 13:37:09,MR-20231009080709-11859,King Fashion Indo/Sher,Stitching,CPSH158,302-Cream,Open
+Material Requirement Request,2023-10-17 17:46:19,MR-20231017121619-12125,Sardar Enterprise,Stitching,JAC253,302-Cream,Open
+Material Requirement Request,2023-10-17 17:51:31,MR-20231017122131-12128,Sardar Enterprise,Stitching,JAC253,302-Cream,Open
+Material Requirement Request,2023-10-18 17:42:40,MR-20231018121240-12168,Sardar Enterprise,Stitching,WC0220V,322-Wine,Open
+Material Requirement Request,2023-10-18 17:45:30,MR-20231018121530-12169,Sardar Enterprise,Stitching,WC0220V,322-Wine,Open
+Material Requirement Request,2023-10-26 18:38:00,MR-20231026130800-12292,Sardar Enterprise,Stitching,PCKIW688,306-Dark Blue,Open
+Material Requirement Request,2023-11-09 17:23:15,MR-20231109115315-12637,Sardar Enterprise,Stitching,JAC242,333-Aqua Green,Open
+Material Requirement Request,2023-11-09 17:31:37,MR-20231109120137-12642,Sardar Enterprise,Stitching,WC0221V,306-Dark Blue,Open
+Material Requirement Request,2023-11-10 14:43:11,MR-20231110091311-12649,Shandar Fashion,Stitching,CPSH260,340A-Warm White,Open
+Material Requirement Request,2023-11-10 14:48:48,MR-20231110091848-12650,Shandar Fashion,Stitching,CIDES783,306-Dark Blue,Open
+Material Requirement Request,2023-11-13 17:04:41,MR-20231113113441-12717,Sardar Enterprise,Stitching,PCKIW730,301-White,Open
+Material Requirement Request,2023-11-16 10:59:29,MR-20231116052929-12775,Sardar Enterprise,Stitching,JAC253,302-Cream,Open
+Material Requirement Request,2023-11-16 11:01:04,MR-20231116053104-12777,Sardar Enterprise,Stitching,JAC383,302-Cream,Open
+Material Requirement Request,2023-11-17 13:42:04,MR-20231117081204-12814,King Fashion Indo/Sher,Stitching,CPSH272,341-Light Blue,Open
+Material Requirement Request,2023-11-24 11:12:12,MR-20231124054212-12941,Shandar Fashion,Stitching,JAC301,340-Warm White,Open
+Material Requirement Request,2023-11-24 11:13:37,MR-20231124054337-12942,Shandar Fashion,Stitching,JAC357,311-Pista Green,Open
+Material Requirement Request,2023-11-24 11:14:30,MR-20231124054430-12943,Shandar Fashion,Stitching,WC0222,317-Light Mid Green,Open
+Material Requirement Request,2023-11-24 11:15:52,MR-20231124054552-12944,Shandar Fashion,Stitching,WC0218,302-Cream,Open
+Material Requirement Request,2023-11-24 11:18:04,MR-20231124054804-12945,Shandar Fashion,Stitching,JAC300,301-White,Open
+Material Requirement Request,2023-11-24 11:19:16,MR-20231124054916-12946,Shandar Fashion,Stitching,JAC340,302-Cream,Open
+Material Requirement Request,2023-11-24 11:20:17,MR-20231124055017-12947,Shandar Fashion,Stitching,PCJST335,306-Dark Blue,Open
+Material Requirement Request,2023-11-24 11:21:00,MR-20231124055100-12948,Shandar Fashion,Stitching,PCJST326,333-Aqua Green,Open
+Material Requirement Request,2023-11-24 11:21:46,MR-20231124055146-12949,Shandar Fashion,Stitching,JAC313,324-Yellow,Open
+Material Requirement Request,2023-11-24 11:22:29,MR-20231124055229-12950,Shandar Fashion,Stitching,JAC244,326-Teal Blue,Open
+Material Requirement Request,2023-12-01 12:08:47,MR-20231201063847-13117,Sardar Enterprise,Stitching,WC0222,316-Dark Green,Open
+Material Requirement Request,2023-12-01 12:54:22,MR-20231201072422-13127,Sardar Enterprise,Stitching,JAC346,312-Light Grey,Open
+Material Requirement Request,2023-12-04 17:55:54,MR-20231204122554-13178,Sardar Enterprise,Stitching,PCKIW685,306-Dark Blue,Open
+Material Requirement Request,2023-12-04 17:58:44,MR-20231204122844-13179,Sardar Enterprise,Stitching,PCKID720,311-Pista Green,Open
+Master Sample,2023-09-12 15:42:42,MSR-20230912101242-11053,RGAP IHPU,Cutting,CJST290I,327-Teal Green,Open
+Master Sample,2023-09-12 15:53:38,MSR-20230912102338-11056,RGAP IHPU,Cutting,CJST273I,317-Light Mid Green,Open
+Master Sample,2023-09-14 17:46:32,MSR-20230914121632-11132,Wasim Ara,Cutting,MLS121,340-Warm White,Open
+Master Sample,2023-09-15 12:16:00,MSR-20230915064600-11143,W A CREATION,Embroidering,NMTS0148,306-Dark Blue,Open
+Master Sample,2023-09-20 15:38:31,MSR-20230920100831-11278,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDES950,340-Warm White,Open
+Master Sample,2023-09-22 12:28:15,MSR-20230922065815-11350,SWATHE GARMENTS PVT LTD - Jobber,Stitching,MLS131,322-Wine,Open
+Master Sample,2023-09-22 12:29:55,MSR-20230922065955-11351,SWATHE GARMENTS PVT LTD - Jobber,Stitching,SDES994,306-Dark Blue,Open
+Master Sample,2023-09-22 17:23:43,MSR-20230922115343-11380,RGAP IHPU,Cutting,CSID0012,306-Dark Blue,Open
+Master Sample,2023-09-25 12:46:29,MSR-20230925071629-11439,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDES950,340-Warm White,Open
+Master Sample,2023-09-29 11:19:28,MSR-20230929054928-11594,Tofa Enterprise,Stitching,SDES953,316-Dark Green,Open
+Master Sample,2023-10-05 10:41:21,MSR-20231005051121-11724,Tofa Enterprise,Stitching,SDES974,303-Beige,Open
+Master Sample,2023-10-09 12:22:15,MSR-20231009065215-11846,Tofa Enterprise,Stitching,MLS056,301-White,Open
+Master Sample,2023-10-09 12:35:46,MSR-20231009070546-11849,Tofa Enterprise,Stitching,MLS097,311-Pista Green,Open
+Master Sample,2023-10-09 13:15:30,MSR-20231009074530-11853,Sonu Fashion,Cutting,SDES1044,306-Dark Blue,Open
+Master Sample,2023-10-09 13:56:49,MSR-20231009082649-11862,Fashion Pol Enterprise,Cutting,TWSFA033,302-Cream,Open
+Master Sample,2023-10-11 13:15:19,MSR-20231011074519-11924,Fashion Pol Enterprise,Cutting,SFBD152,340-Warm White,Open
+Master Sample,2023-10-13 10:52:53,MSR-20231013052253-11988,Tofa Enterprise,Cutting,MLS149,317-Light Mid Green,Open
+Master Sample,2023-10-13 10:53:07,MSR-20231013052307-11989,Tofa Enterprise,Stitching,MLS118,311-Pista Green,Open
+Master Sample,2023-10-13 15:12:00,MSR-20231013094200-12004,Tofa Enterprise,Cutting,C12032,306-Dark Blue,Open
+Master Sample,2023-10-13 15:12:30,MSR-20231013094230-12005,Tofa Enterprise,Cutting,CHOSK607,316-Dark Green,Open
+Master Sample,2023-10-13 15:12:50,MSR-20231013094250-12006,Tofa Enterprise,Cutting,MLS070,301-White,Open
+Master Sample,2023-10-13 15:13:22,MSR-20231013094322-12007,Tofa Enterprise,Cutting,MLS116,302-Cream,Open
+Master Sample,2023-10-13 15:13:53,MSR-20231013094353-12008,Tofa Enterprise,Cutting,MLS0047,307-Maroon,Open
+Master Sample,2023-10-13 15:14:14,MSR-20231013094414-12009,Tofa Enterprise,Cutting,MLS0047,317-Light Mid Green,Open
+Master Sample,2023-10-13 15:14:36,MSR-20231013094436-12010,Tofa Enterprise,Cutting,MLS121,340-Warm White,Open
+Master Sample,2023-10-13 22:01:53,MSR-20231013163153-12022,Sonu Fashion,Cutting,CPSKS0282,327-Teal Green,Open
+Master Sample,2023-10-13 22:02:19,MSR-20231013163219-12023,Sonu Fashion,Cutting,SDES1061,315-Pink,Open
+Master Sample,2023-10-13 22:02:37,MSR-20231013163237-12024,Sonu Fashion,Cutting,SDES1070,306-Dark Blue,Open
+Master Sample,2023-10-13 22:03:11,MSR-20231013163311-12026,Sonu Fashion,Cutting,SKS1003,340-Warm White,Open
+Master Sample,2023-10-14 18:46:03,MSR-20231014131603-12047,W A CREATION,Embroidering,NMTS0148,326-Teal Blue,Open
+Master Sample,2023-10-18 11:21:26,MSR-20231018055126-12155,RGAP IHPU,Cutting,IDES986,316-Dark Green,Open
+Master Sample,2023-10-21 01:08:39,MSR-20231020193839-12231,Sonu Fashion,Cutting,SDES1045,306-Dark Blue,Open
+Master Sample,2023-10-21 01:09:20,MSR-20231020193920-12233,Sonu Fashion,Cutting,SDES1061,315-Pink,Open
+Master Sample,2023-10-21 10:22:25,MSR-20231021045225-12236,Wasim Ara-Cutting-Indo/shw/jacket,Cutting,JAC319,306/307-Dark Blue-Maroon,Open
+Master Sample,2023-10-26 11:52:58,MSR-20231026062258-12274,Shandar Fashion,Stitching,IDES976V,315-Pink,Open
+Master Sample,2023-10-26 12:18:41,MSR-20231026064841-12279,Tofa Enterprise,Cutting,CDES673,341-Light Blue,Open
+Master Sample,2023-10-26 12:18:59,MSR-20231026064859-12280,Tofa Enterprise,Cutting,MLS091,316-Dark Green,Open
+Master Sample,2023-10-26 12:20:06,MSR-20231026065006-12281,Tofa Enterprise,Cutting,MLS103,306-Dark Blue,Open
+Master Sample,2023-10-28 14:59:49,MSR-20231028092949-12318,Fashion Pol Enterprise,Cutting,DSFA185,302-Cream,Open
+Master Sample,2023-10-30 11:18:15,MSR-20231030054815-12343,Wasim Ara-Cutting-Indo/shw/jacket,Cutting,JAC312,302-Cream,Open
+Master Sample,2023-10-30 12:02:01,MSR-20231030063201-12345,Tofa Enterprise,Cutting,C12120,306-Dark Blue,Open
+Master Sample,2023-10-30 12:07:39,MSR-20231030063739-12347,Tofa Enterprise,Cutting,MLS089,301-White,Open
+Master Sample,2023-10-30 12:07:59,MSR-20231030063759-12348,Tofa Enterprise,Cutting,CHOSK538,319-Peach,Open
+Master Sample,2023-10-30 12:08:33,MSR-20231030063833-12349,Tofa Enterprise,Cutting,CHOSK538I,333-Aqua Green,Open
+Master Sample,2023-10-30 12:08:48,MSR-20231030063848-12350,Tofa Enterprise,Cutting,MLS132,303-Beige,Open
+Master Sample,2023-10-30 12:09:51,MSR-20231030063951-12352,Tofa Enterprise,Cutting,C12041,327-Teal Green,Open
+Master Sample,2023-10-30 12:10:09,MSR-20231030064009-12353,Tofa Enterprise,Cutting,C12033I,318-Orange,Open
+Master Sample,2023-10-30 12:44:13,MSR-20231030071413-12354,Tofa Enterprise,Cutting,C12131,328-Mustard,Open
+Master Sample,2023-10-30 12:44:25,MSR-20231030071425-12355,Tofa Enterprise,Cutting,C12131,342-Coral,Open
+Master Sample,2023-10-30 12:44:38,MSR-20231030071438-12356,Tofa Enterprise,Cutting,C12131,380-Turquoise Blue,Open
+Master Sample,2023-10-30 12:44:58,MSR-20231030071458-12357,Tofa Enterprise,Cutting,C12131,317-Light Mid Green,Open
+Master Sample,2023-10-31 10:08:53,MSR-20231031043853-12379,Wasim Ara,Cutting,SDES902,303-Beige,Open
+Master Sample,2023-10-31 11:15:24,MSR-20231031054524-12380,Tofa Enterprise,Stitching,MLS138,326-Teal Blue,Open
+Master Sample,2023-11-01 12:51:38,MSR-20231101072138-12407,Shandar Fashion,Stitching,IDES976V,315-Pink,Open
+Master Sample,2023-11-01 15:30:22,MSR-20231101100022-12417,Sonu Fashion,Cutting,SDES1052,333-Aqua Green,Open
+Master Sample,2023-11-01 15:31:31,MSR-20231101100131-12419,Sonu Fashion,Cutting,SDES1070,306-Dark Blue,Open
+Master Sample,2023-11-01 15:31:50,MSR-20231101100150-12420,Sonu Fashion,Cutting,SDES1045,306-Dark Blue,Open
+Master Sample,2023-11-01 15:32:11,MSR-20231101100211-12421,Sonu Fashion,Cutting,CPSKS0282,327-Teal Green,Open
+Master Sample,2023-11-01 15:32:57,MSR-20231101100257-12422,Sonu Fashion,Cutting,SDES1061,315-Pink,Open
+Master Sample,2023-11-01 15:33:16,MSR-20231101100316-12423,Sonu Fashion,Cutting,SDES1043,307-Maroon,Open
+Master Sample,2023-11-01 15:33:51,MSR-20231101100351-12424,Sonu Fashion,Cutting,SDES673,308-Dark Grey,Open
+Master Sample,2023-11-02 15:02:58,MSR-20231102093258-12445,Wasim Ara,Cutting,MLS089,301-White,Open
+Master Sample,2023-11-02 15:04:01,MSR-20231102093401-12446,Wasim Ara,Cutting,SDMTS005,333-Aqua Green,Open
+Master Sample,2023-11-02 15:05:12,MSR-20231102093512-12447,Wasim Ara-Cutting-Indo/shw/jacket,Cutting,WC0239,340-Warm White,Open
+Master Sample,2023-11-03 17:49:22,MSR-20231103121922-12475,Shalu Garments,Stitching,ML12109,341-Light Blue,Open
+Master Sample,2023-11-04 11:41:42,MSR-20231104061142-12483,Tofa Enterprise,Stitching,MLS118,311-Pista Green,Open
+Master Sample,2023-11-06 11:19:54,MSR-20231106054954-12514,Wasim Ara-Cutting-Lower/Other,Cutting,PCPENCILSKS1000,301-White,Open
+Master Sample,2023-11-06 14:23:47,MSR-20231106085347-12521,Fashion Pol Enterprise,Cutting,SHOD056,302-Cream,Open
+Master Sample,2023-11-07 22:35:35,MSR-20231107170535-12577,Sardar Enterprise,Stitching,SDMTS074,311-Pista Green,Open
+Master Sample,2023-11-07 22:36:27,MSR-20231107170627-12578,Sardar Enterprise,Stitching,SDMTS073,318-Orange,Open
+Master Sample,2023-11-07 22:37:30,MSR-20231107170730-12579,Sardar Enterprise,Stitching,NMTS0204,304-Fawn,Open
+Master Sample,2023-11-07 22:38:13,MSR-20231107170813-12580,Sardar Enterprise,Stitching,JAC347,340-Warm White,Open
+Master Sample,2023-11-08 15:42:53,MSR-20231108101253-12590,Shandar Fashion,Stitching,PCJST237D,306-Dark Blue,Open
+Master Sample,2023-11-08 15:43:14,MSR-20231108101314-12591,Shandar Fashion,Stitching,PCJST237,306-Dark Blue,Open
+Master Sample,2023-11-09 11:12:44,MSR-20231109054244-12616,Shandar Fashion,Stitching,IDES976V,315-Pink,Open
+Master Sample,2023-11-09 12:08:48,MSR-20231109063848-12617,Wasim Ara,Cutting,SDES700,302-Cream,Open
+Master Sample,2023-11-10 03:24:41,MSR-20231109215441-12645,Shandar Fashion,Stitching,IDES976V,315-Pink,Open
+Master Sample,2023-11-10 10:38:53,MSR-20231110050853-12647,SHREE GARMENTS,Cutting,JAC394,326-Teal Blue,Open
+Master Sample,2023-11-10 10:39:10,MSR-20231110050910-12648,SHREE GARMENTS,Cutting,SDES1072V,306-Dark Blue,Open
+Master Sample,2023-11-11 13:17:26,MSR-20231111074726-12667,SWATHE GARMENTS PVT LTD - Jobber,Cutting,ML12117,333-Aqua Green,Open
+Master Sample,2023-11-13 15:42:37,MSR-20231113101237-12713,Sonu Fashion,Cutting,SDES1058,313-Purple,Open
+Master Sample,2023-11-13 15:42:55,MSR-20231113101255-12714,Sonu Fashion,Cutting,SDES1060,303-Beige,Open
+Master Sample,2023-11-14 11:47:54,MSR-20231114061754-12727,Iqbal Embroidery,Stitching,PCBDOD4691J,303-Beige,Open
+Master Sample,2023-11-16 18:30:11,MSR-20231116130011-12797,Sonu Fashion,Cutting,SDES1059,306-Dark Blue,Open
+Master Sample,2023-11-16 18:38:05,MSR-20231116130805-12799,Sonu Fashion,Cutting,SDES1078,302-Cream,Open
+Master Sample,2023-11-16 18:39:07,MSR-20231116130907-12801,Sonu Fashion,Cutting,SDES912,322-Wine,Open
+Master Sample,2023-11-18 19:14:25,MSR-20231118134425-12831,Fashion Pol Enterprise,Cutting,JUTI169,315-Pink,Open
+Master Sample,2023-11-20 21:04:29,MSR-20231120153429-12872,Sardar Enterprise,Printex,PCKID777,340-Warm White,Open
+Master Sample,2023-11-21 13:13:16,MSR-20231121074316-12882,Wasim Ara-Cutting-Indo/shw/jacket,Cutting,JAC353,340-Warm White,Open
+Master Sample,2023-11-21 18:24:44,MSR-20231121125444-12898,SHREE GARMENTS,Cutting,SDES1038,306-Dark Blue,Open
+Master Sample,2023-11-21 18:25:04,MSR-20231121125504-12899,SHREE GARMENTS,Cutting,SDES1074V,310-Black,Open
+Master Sample,2023-11-21 20:18:26,MSR-20231121144826-12900,SHREE GARMENTS,Cutting,CPOSK665,302-Cream,Open
+Master Sample,2023-11-23 10:19:49,MSR-20231123044949-12915,Wasim Ara,Cutting,MLS0003,306-Dark Blue,Open
+Master Sample,2023-11-23 17:22:00,MSR-20231123115200-12936,Wasim Ara-Cutting-Indo/shw/jacket,Cutting,JAC221,328-Mustard,Open
+Master Sample,2023-11-24 14:28:19,MSR-20231124085819-12953,Sardar Enterprise,Printex,WC0226,306-Dark Blue,Open
+Master Sample,2023-11-24 14:54:37,MSR-20231124092437-12954,Shandar Fashion,Stitching,IDES976V,315-Pink,Open
+Master Sample,2023-11-24 15:25:09,MSR-20231124095509-12956,Sardar Enterprise,Stitching,JAST123,303-Beige,Open
+Master Sample,2023-11-24 15:26:18,MSR-20231124095618-12957,Sardar Enterprise,Stitching,C12104A,301-White,Open
+Master Sample,2023-11-24 15:26:53,MSR-20231124095653-12958,Sardar Enterprise,Stitching,C952810,326-Teal Blue,Open
+Master Sample,2023-11-24 15:27:10,MSR-20231124095710-12959,Sardar Enterprise,Stitching,CDES406,319-Peach,Open
+Master Sample,2023-11-24 17:18:24,MSR-20231124114824-12961,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDES524,310-Black,Open
+Master Sample,2023-11-24 17:18:58,MSR-20231124114858-12962,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDES601,310-Black,Open
+Master Sample,2023-11-24 17:20:08,MSR-20231124115008-12963,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDES524,311-Pista Green,Open
+Master Sample,2023-11-25 20:18:06,MSR-20231125144806-12979,Iqbal Embroidery,Stitching,PCBDOD1001,325-Rani,Open
+Master Sample,2023-11-27 11:23:59,MSR-20231127055359-12986,Tofa Enterprise,Cutting,MLS150,306-Dark Blue,Open
+Master Sample,2023-11-28 15:33:44,MSR-20231128100344-13038,Shandar Fashion,Stitching,IDES783,306-Dark Blue,Open
+Master Sample,2023-11-28 15:34:07,MSR-20231128100407-13039,Shandar Fashion,Stitching,ODES1030,302-Cream,Open
+Master Sample,2023-11-28 15:34:32,MSR-20231128100432-13040,Shandar Fashion,Stitching,ODES1033,302-Cream,Open
+Master Sample,2023-11-29 11:51:40,MSR-20231129062140-13053,SWATHE GARMENTS PVT LTD - Jobber,Cutting,NMTP202C001,102-CREAM,Open
+Master Sample,2023-11-29 12:21:45,MSR-20231129065145-13064,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDES524,306-Dark Blue,Open
+Master Sample,2023-11-29 12:24:41,MSR-20231129065441-13065,Shandar Fashion,Printex,CPOSK543,319-Peach,Open
+Master Sample,2023-11-30 12:03:51,MSR-20231130063351-13093,Tofa Enterprise,Cutting,MLS151,303-Beige,Open
+Master Sample,2023-12-01 11:58:57,MSR-20231201062857-13112,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDMTS001,324-Yellow,Open
+Master Sample,2023-12-01 12:02:15,MSR-20231201063215-13114,SWATHE GARMENTS PVT LTD - Jobber,Cutting,SDMTS001,324-Yellow,Open
+Master Sample,2023-12-01 17:28:39,MSR-20231201115839-13136,Wasim Ara,Cutting,MLS126,316-Dark Green,Open
+Master Sample,2023-12-01 17:29:33,MSR-20231201115933-13137,Wasim Ara,Cutting,MLS131,322-Wine,Open
+Master Sample,2023-12-01 17:30:26,MSR-20231201120026-13138,Wasim Ara,Cutting,SDMTS021,333-Aqua Green,Open
+Master Sample,2023-12-01 18:06:47,MSR-20231201123647-13142,King Fashion Cutting (Kurta),Cutting,SDES869,333-Aqua Green,Open
+Master Sample,2023-12-02 11:54:34,MSR-20231202062434-13143,Shandar Fashion,Stitching,ODES992D,325-Rani,Open
+Master Sample,2023-12-02 11:54:56,MSR-20231202062456-13144,Shandar Fashion,Stitching,ODES1033,302-Cream,Open
+Master Sample,2023-12-04 21:17:36,MSR-20231204154736-13182,Md Sagir Fashion,Embroidering,IDES791,312-Light Grey,Open
+Master Sample,2023-12-04 22:54:02,MSR-20231204172402-13183,Md.Salam (SDF-4),Stitching,PCBDOD1005,302-Cream,Open
+Master Sample,2023-12-05 12:02:17,MSR-20231205063217-13184,Wasim Ara,Cutting,MLS126,316-Dark Green,Open
+Master Sample,2023-12-05 13:03:26,MSR-20231205073326-13187,SAHA FASHION,Embroidering,SDES795,302-Cream,Open
+Master Sample,2023-12-05 15:54:50,MSR-20231205102450-13194,Tofa Enterprise,Cutting,CHOSK596,334-L. GREEN,Open
+Master Sample,2023-12-05 15:55:48,MSR-20231205102548-13195,Tofa Enterprise,Cutting,C12032I,306-Dark Blue,Open
+Master Sample,2023-12-05 16:38:20,MSR-20231205110820-13196,Tofa Enterprise,Cutting,MLS080,307-Maroon,Open
+Master Sample,2023-12-05 17:00:13,MSR-20231205113013-13197,Tofa Enterprise,Cutting,MLS097,304-Fawn,Open
+Master Sample,2023-12-05 17:01:18,MSR-20231205113118-13198,Tofa Enterprise,Cutting,MLS097,328-Mustard,Open
+Master Sample,2023-12-06 11:44:14,MSR-20231206061414-13202,Sonu Fashion,Cutting,CPOSK632,317-Light Mid Green,Open
+Master Sample,2023-12-06 11:44:34,MSR-20231206061434-13203,Sonu Fashion,Cutting,SDES1084,302-Cream,Open
+Master Sample,2023-12-06 15:36:42,MSR-20231206100642-13214,Sardar Enterprise,Stitching,JAC295,303-Beige,Open
+Master Sample,2023-12-06 15:55:50,MSR-20231206102550-13217,SHREE GARMENTS,Cutting,SDES936,340-Warm White,Open
+Master Sample,2023-12-06 15:56:25,MSR-20231206102625-13218,SHREE GARMENTS,Cutting,SDES515,306-Dark Blue,Open
+Master Sample,2023-12-06 15:56:44,MSR-20231206102644-13219,SHREE GARMENTS,Cutting,SDES1054,303/315-Beige-Pink,Open
+Master Sample,2023-12-06 15:57:11,MSR-20231206102711-13220,SHREE GARMENTS,Cutting,CPOSK589,306-Dark Blue,Open
+Master Sample,2023-12-06 15:57:32,MSR-20231206102732-13221,SHREE GARMENTS,Cutting,CPOSK563,319-Peach,Open
+Master Sample,2023-12-06 15:57:48,MSR-20231206102748-13222,SHREE GARMENTS,Cutting,SDES1072V,306-Dark Blue,Open
+Master Sample,2023-12-06 15:58:03,MSR-20231206102803-13223,SHREE GARMENTS,Cutting,SDES1074V,310-Black,Open
+Master Sample,2023-12-06 16:08:52,MSR-20231206103852-13224,Sardar Enterprise,Printex,JAST167A,373-Dusty Pink,Open
+Master Sample,2023-12-06 16:09:06,MSR-20231206103906-13225,Sardar Enterprise,Printex,JAST256,341-Light Blue,Open
+Master Sample,2023-12-06 16:09:24,MSR-20231206103924-13226,Sardar Enterprise,Printex,JAST267,319-Peach,Open
+Master Sample,2023-12-06 16:10:02,MSR-20231206104002-13227,Sardar Enterprise,Stitching,JAST137,303-Beige,Open
+Master Sample,2023-12-06 16:10:18,MSR-20231206104018-13228,Sardar Enterprise,Stitching,JAST155,322-Wine,Open
+Master Sample,2023-12-06 16:10:47,MSR-20231206104047-13229,Sardar Enterprise,Stitching,JAST160D,319-Peach,Open
+Master Sample,2023-12-06 16:11:12,MSR-20231206104112-13230,Sardar Enterprise,Stitching,JAST167,317-Light Mid Green,Open
+Master Sample,2023-12-06 16:11:26,MSR-20231206104126-13231,Sardar Enterprise,Stitching,JAST168,306A-BLUE,Open
+Master Sample,2023-12-06 16:13:09,MSR-20231206104309-13232,Sardar Enterprise,Stitching,JAST176,306-Dark Blue,Open
+Master Sample,2023-12-06 16:13:24,MSR-20231206104324-13233,Sardar Enterprise,Stitching,JAST211,302-Cream,Open
+Master Sample,2023-12-06 16:13:40,MSR-20231206104340-13234,Sardar Enterprise,Stitching,JAST229,317-Light Mid Green,Open
+Master Sample,2023-12-06 16:15:12,MSR-20231206104512-13235,Sardar Enterprise,Stitching,JAST235,302/319-Cream-Peach,Open
+Master Sample,2023-12-06 16:15:38,MSR-20231206104538-13236,Sardar Enterprise,Stitching,JAST235,302/334-Cream-L.Green,Open
+Master Sample,2023-12-06 16:15:54,MSR-20231206104554-13237,Sardar Enterprise,Stitching,JAST235,302-Cream,Open
+Master Sample,2023-12-06 16:16:09,MSR-20231206104609-13238,Sardar Enterprise,Stitching,JAST244,302-Cream,Open
+Master Sample,2023-12-06 16:16:24,MSR-20231206104624-13239,Sardar Enterprise,Stitching,JAST245,302-Cream,Open
+Master Sample,2023-12-06 16:16:40,MSR-20231206104640-13240,Sardar Enterprise,Stitching,JAST273,333/301-Aqua Green-White,Open
+Master Sample,2023-12-06 16:16:59,MSR-20231206104659-13241,Sardar Enterprise,Stitching,JAST287,319-Peach,Open
+Master Sample,2023-12-07 17:27:24,MSR-20231207115724-13247,SWATHE GARMENTS PVT LTD - Jobber,Cutting,ML12120,306-Dark Blue,Open
+Master Sample,2023-12-08 12:09:56,MSR-20231208063956-13248,King Fashion Cutting (Kurta),Cutting,SDES673,306-Dark Blue,Open
+Master Sample,2023-12-08 12:23:52,MSR-20231208065352-13249,Naz Garments,Cutting,ML12121,303-Beige,Open
+Master Sample,2023-12-08 16:17:22,MSR-20231208104722-13251,Ali Garments,Cutting,CHOSK563,319-Peach,Open
+Master Sample,2023-12-08 16:55:07,MSR-20231208112507-13252,King Fashion Cutting (Kurta),Cutting,SDES673,317-Light Mid Green,Open
+Master Sample,2023-12-08 18:10:38,MSR-20231208124038-13253,Sardar Enterprise,Printex,JAST256,341-Light Blue,Open
+Master Sample,2023-12-08 18:11:22,MSR-20231208124122-13255,Sardar Enterprise,Printex,JAST267,319-Peach,Open
+Master Sample,2023-12-08 18:11:46,MSR-20231208124146-13256,Sardar Enterprise,Printex,JAST267,333-Aqua Green,Open
+Master Sample,2023-12-08 18:12:06,MSR-20231208124206-13257,Sardar Enterprise,Printex,JAST167A,373-Dusty Pink,Open
+Master Sample,2023-12-08 18:12:28,MSR-20231208124228-13258,Sardar Enterprise,Printex,PCKOD995,302-Cream,Open
+Master Sample,2023-12-08 18:12:45,MSR-20231208124245-13259,Sardar Enterprise,Printex,SDES943,376-Natural,Open
+Master Sample,2023-12-09 19:15:25,MSR-20231209134525-13261,King Fashion Indo/Sher,Stitching,CPIW677A,341-Light Blue,Open
+Pre Production Sample,2023-12-09 12:31:30,PPS/20231129053345/13050-01,Fair Fashion,Stitching,CPSH272,341-Light Blue,Open
+Pre Production Sample,2023-12-02 17:03:43,PPS/20231202113343/13147-01,SWATHE GARMENTS PVT LTD - Jobber,Printex,SDMTM010,324-Yellow,Open
+Pre Production Sample,2023-12-04 12:29:40,PPS/20231204065939/13154-01,Biswas Enterprise,Embroidering,JAST158,302-Cream,Open
+Pre Production Sample,2023-12-04 12:29:52,PPS/20231204065952/13155-01,Biswas Enterprise,Embroidering,JAST158,302/373-Cream-Dusty Pink,Open
+Pre Production Sample,2023-12-05 14:16:49,PPS/20231205084649/13189-01,Shandar Fashion,Printex,CPOSK543,319-Peach,Open
+Pre Production Sample,2023-12-06 13:06:28,PPS/20231206073628/13207-01,Shandar Fashion,Printex,SDES814,373-Dusty Pink,Open
+Pre Production Sample,2023-12-06 13:14:48,PPS/20231206074448/13208-01,W A CREATION,Stitching,PCBDIW655V,310/348-Black-Dark Brown,Open
+Pre Production Sample,2023-12-09 00:28:52,PPS/20231206085141/13212-01,Abdullah Ansari (SDF-4),Stitching,IDES755,325-Rani,Open
+Pre Production Sample,2023-12-06 15:55:10,PPS/20231206102510/13216-01,SHREE GARMENTS,Stitching,JAC275,301-White,Open
+Pre Production Sample,2023-12-06 21:18:45,PPS/20231206154845/13223-01,Amin Fashion,Stitching,CPSH260,340A-Warm White,Open
+Pre Production Sample,2023-12-07 12:20:59,PPS/20231207065059/13225-01,SHREE GARMENTS,Printex,CPSKS0282,327-Teal Green,Open
+Pre Production Sample,2023-12-07 12:51:14,PPS/20231207072114/13227-01,SHREE GARMENTS,Printex,CPSKS0282,303-Beige,Open
+Pre Production Sample,2023-12-07 13:13:30,PPS/20231207074330/13228-01,Rizu Embroidery Works,Embroidering,CPSH314D,302-Cream,Open
+Pre Production Sample,2023-12-07 13:13:56,PPS/20231207074356/13229-01,Rizu Embroidery Works,Embroidering,CPSH314D,303-Beige,Open
+Pre Production Sample,2023-12-07 13:18:20,PPS/20231207074820/13230-01,Rizu Embroidery Works,Embroidering,PCKOD1028,302-Cream,Open
+Pre Production Sample,2023-12-07 13:18:57,PPS/20231207074857/13231-01,Rizu Embroidery Works,Embroidering,ODES1046D,302-Cream,Open
+Pre Production Sample,2023-12-07 17:56:09,PPS/20231207122609/13235-01,Fair Dealing Kurta,Stitching,SDES987,341-Light Blue,Open
+Pre Production Sample,2023-12-07 18:35:23,PPS/20231207130523/13237-01,Abha Creation,Stitching,JAC352,341-Light Blue,Open
+Pre Production Sample,2023-12-07 19:53:15,PPS/20231207142315/13238-01,SHREE GARMENTS,Stitching,CJST186,328-Mustard,Open
+Pre Production Sample,2023-12-07 20:04:19,PPS/20231207143419/13239-01,SHREE GARMENTS,Stitching,SDES1022,380-Turquoise Blue,Open
+Pre Production Sample,2023-12-08 12:03:41,PPS/20231208063341/13241-01,SWATHE GARMENTS PVT LTD - Jobber,Stitching,SDMTS001,324-Yellow,Open
+Pre Production Sample,2023-12-08 12:04:34,PPS/20231208063434/13242-01,SWATHE GARMENTS PVT LTD - Jobber,Stitching,SDES524,306-Dark Blue,Open
+Pre Production Sample,2023-12-08 12:19:00,PPS/20231208064900/13243-01,SHREE GARMENTS,Stitching,CPOSK612,307-Maroon,Open
+Pre Production Sample,2023-12-08 12:19:31,PPS/20231208064931/13244-01,SHREE GARMENTS,Stitching,SDES632,321-Mehndi Green,Open
+Pre Production Sample,2023-12-08 12:34:53,PPS/20231208070453/13245-01,Tofa Enterprise,Stitching,CHOSK538I,333-Aqua Green,Open
+Pre Production Sample,2023-12-08 12:35:13,PPS/20231208070513/13246-01,Tofa Enterprise,Stitching,C12033I,318-Orange,Open
+Pre Production Sample,2023-12-08 12:35:33,PPS/20231208070533/13247-01,Tofa Enterprise,Stitching,CHOSK607,316-Dark Green,Open
+Pre Production Sample,2023-12-08 12:35:47,PPS/20231208070547/13248-01,Tofa Enterprise,Stitching,CDES670,333-Aqua Green,Open
+Pre Production Sample,2023-12-08 12:44:40,PPS/20231208071440/13249-01,SWATHE GARMENTS PVT LTD - Jobber,Stitching,NMTP505C001,340-Warm White,Open
+Pre Production Sample,2023-12-08 17:37:20,PPS/20231208120720/13251-01,King Fashion,Stitching,MK50102,302-Cream,Open
+Pre Production Sample,2023-12-08 17:54:19,PPS/20231208122419/13252-01,Sardar Enterprise,Printex,JAC355,308-Dark Grey,Open
+Pre Production Sample,2023-12-08 18:10:50,PPS/20231208124050/13253-01,King Fashion Indo/Sher,Stitching,IDES780,322/306-Wine-Dark Blue,Open
+Pre Production Sample,2023-12-08 18:11:02,PPS/20231208124102/13254-01,King Fashion Indo/Sher,Stitching,CPIW658,325-Rani,Open
+Pre Production Sample,2023-12-09 12:30:26,PPS/20231209070026/13256-01,Fair Fashion,Stitching,IDES754V,310-Black,Open
+Pre Production Sample,2023-12-09 13:19:57,PPS/20231209074957/13257-01,Rizu Embroidery Works,Embroidering,SDES1043,307-Maroon,Open
+Pre Production Sample,2023-12-09 15:29:45,PPS/20231209095945/13258-01,SWATHE GARMENTS PVT LTD - Jobber,Stitching,SDES925,326-Teal Blue,Open
+Pre Production Sample,2023-12-09 17:08:12,PPS/20231209113812/13259-01,King Fashion,Stitching,SDES978,310-Black,Open
+Pre Production Sample,2023-12-09 17:08:59,PPS/20231209113859/13260-01,Naz Garments,Stitching,MK50102,342-Coral,Open
+Pre Production Sample,2023-12-09 19:52:28,PPS/20231209142228/13261-01,Shandar Fashion,Stitching,S952612,340-Warm White,Open
+Pre Production Sample,2023-12-01 12:03:05,PPS/20231114080655/12731-01,Ali Garments,Printex,CPSKS0347,303-Beige,Open
+Other Requirement,2021-12-08 08:21:08,OTR_20211208082108_91,Shandar Fashion,Cutting,CPOSK296,328-L. ORANGE,Open
+Other Requirement,2021-12-10 06:05:19,OTR_20211210060519_4,Shandar Fashion,Cutting,S952790,304-FAWN,Open
+Other Requirement,2021-12-10 08:21:46,OTR_20211210082146_7,Shandar Fashion,Cutting,CPOSK296,328-L. ORANGE,Open

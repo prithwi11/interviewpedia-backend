@@ -7,6 +7,7 @@ module.exports = class categoryController {
     getCategory = async(req, res) => {
         try {
             const categoryObj = await this.categoryModelObj.getCategoryListing()
+            console.log('category', categoryObj.length)
             if (categoryObj.length > 0) {
                 global.Helpers.successStatusBuild(res, categoryObj)
             }
@@ -48,10 +49,65 @@ module.exports = class categoryController {
 
     category_add_csv = async(req, res) => {
         try {
+            let csvtojson = require('csvtojson')
             const fileUploadHelper = require('../../../helper/FileUploadHelper')
             const uploadFile = await fileUploadHelper.fileUpload(req)
-            console.log('uploadFile', uploadFile)
-            global.Helpers.successStatusBuild(res, 'File Uploaded successfully')
+            let errorFlag = false
+            let errorMessage = ''
+            if (uploadFile) {
+                const categoryArray = await csvtojson().fromFile(uploadFile)
+                console.log('categoryArray', categoryArray)
+                for (let fileIndex = 0; fileIndex < categoryArray.length; fileIndex++) {
+                    let categoryName = categoryArray[fileIndex]['Category']
+                    let parentCategoryName = categoryArray[fileIndex]['Parent_Category']
+
+                    /* Same category name will not be twice checking */
+                    let checkCategoryNameExist = await this.categoryModelObj.findByAny({category_name : categoryName})
+
+                    if (checkCategoryNameExist) {
+                        errorFlag = true;
+                        errorMessage = "Category Name Already Exists for index " + fileIndex
+                    }
+                    else {
+                        if (parentCategoryName == 'N/A') {
+                            var categoryInsertObj = {
+                                category_name : categoryName,
+                                parent_id : 0,
+                                level : 0,
+                                fk_user_id : 0
+                            }
+                        }
+                        else {
+                            let checkForParentCategory = await this.categoryModelObj.findByAny({category_name : parentCategoryName})
+                            if (checkForParentCategory) {
+                                var categoryInsertObj = {
+                                    category_name : categoryName,
+                                    parent_id : checkForParentCategory.category_id,
+                                    level : checkForParentCategory.level + 1,
+                                    fk_user_id : 0
+                                }
+                            }
+                            else {
+                                var categoryInsertObj = {
+                                    category_name : categoryName,
+                                    parent_id : 0,
+                                    level : 0,
+                                    fk_user_id : 0
+                                }
+                            }
+                        }
+                        let categoryInsert = await this.categoryModelObj.addNewRecord(categoryInsertObj)
+                        if (categoryInsert) {
+                            errorFlag = false
+                        }
+                    }
+                }
+                global.Helpers.successStatusBuild(res, 'File Uploaded successfully')
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'some error occurred!')
+            }
+            
         }
         catch (e) {
             console.log(e)

@@ -1,0 +1,20 @@
+Category,Parent_Category
+Web Development,N/A
+Backend,Web Development
+Languages(B),Backend
+PHP,Languages(B)
+PHP,Languages(B)
+PHP,Languages(B)
+PHP,Languages(B)
+PHP,Languages(B)
+Frontend,Web Development
+Languages(F),Frontend
+HTML,Languages(F)
+CSS,Languages(F)
+Javascript,Languages(F)
+React,Javascript
+Angular,Javascript
+Vue,Javascript
+Database,Web Development
+MySQL,Database
+MongoDB,Database

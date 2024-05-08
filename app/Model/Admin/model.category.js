@@ -60,6 +60,7 @@ class categoryModel extends Model {
 
         return new Promise((resolve, reject) => {
             this.connectionObj.sequelize.query(sql, {
+                type: this.connectionObj.sequelize.QueryTypes.SELECT
             }).then((data) => {
                 resolve(data);
             }).catch(error => {

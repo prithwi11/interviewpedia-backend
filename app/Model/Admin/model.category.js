@@ -56,7 +56,7 @@ class categoryModel extends Model {
     }
 
     getCategoryListing = async() => {
-        let sql = "SELECT c1.category_id, c1.category_name, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id"
+        let sql = "SELECT c1.category_id, c1.category_name, c1.level, c1.status, DATE_FORMAT(c1.added_timestamp, '%D %b, %Y') AS added_timestamp, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id"
 
         return new Promise((resolve, reject) => {
             this.connectionObj.sequelize.query(sql, {

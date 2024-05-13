@@ -7,7 +7,6 @@ module.exports = class categoryController {
     getCategory = async(req, res) => {
         try {
             const categoryObj = await this.categoryModelObj.getCategoryListing()
-            console.log('category', categoryObj.length)
             if (categoryObj.length > 0) {
                 global.Helpers.successStatusBuild(res, categoryObj)
             }

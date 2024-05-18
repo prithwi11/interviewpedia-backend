@@ -4,11 +4,17 @@ module.exports = class validatorCls {
         this.check = check
     }
 
+    getCategoryListValidationRule() {
+        return [
+            this.check('first').trim().not().isEmpty().withMessage("Please provide first").isInt().withMessage("Please provide valid first"),
+            this.check('rows').trim().not().isEmpty().withMessage("Please provide rows").isInt().withMessage("Please provide valid rows"),
+        ]
+    }
+
     addCategoryValidationRule() {
         return [
             this.check('category_name').trim().not().isEmpty().withMessage('Please provide category name'),
             this.check('parent_id').trim().not().isEmpty().withMessage('Please provide parent_id'),
-            this.check('level').trim().not().isEmpty().withMessage('Please provide level').isNumeric().withMessage('level must be numeric'),
             this.check('user_id').trim().not().isEmpty().withMessage('Please provide user_id').isNumeric().withMessage('user_id must be numeric'),
         ]
     }
@@ -22,7 +28,6 @@ module.exports = class validatorCls {
         return [
             this.check('category_name').trim().not().isEmpty().withMessage('Please provide category name'),
             this.check('parent_id').trim().not().isEmpty().withMessage('Please provide parent_id'),
-            this.check('level').trim().not().isEmpty().withMessage('Please provide level').isNumeric().withMessage('level must be numeric'),
             this.check('category_id').trim().not().isEmpty().withMessage('Please provide category id'),
         ]
     }

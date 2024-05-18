@@ -12,6 +12,10 @@ let commonMiddlewareObj = new commonMiddleware()
 
 let middlewares = []
 
+middlewares = [
+    categoryMiddlewareObj.getCategoryListValidationRule(),
+    commonMiddlewareObj.checkforerrors
+]
 router.route('/category-list')
     .post(middlewares, this.categoryControllerObj.getCategory)
 

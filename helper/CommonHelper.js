@@ -331,8 +331,8 @@ const commonFunc = class CommonCls {
 		};
 		response_raws.status = this.status;
 		response_raws.publish = this.api_var;
-		response_raws.status_code = global.CONFIG.constants.HTTP_RESPONSE_BAD_REQUEST
-		res.status(global.CONFIG.constants.HTTP_RESPONSE_BAD_REQUEST);
+		response_raws.status_code = global.CONFIG.constants.HTTP_RESPONSE_SOME_ERROR_OCCURRED
+		res.status(global.CONFIG.constants.HTTP_RESPONSE_SOME_ERROR_OCCURRED);
 		res.send({ response: response_raws});
 	}
 

@@ -6,12 +6,19 @@ module.exports = class categoryController {
 
     getCategory = async(req, res) => {
         try {
-            const categoryObj = await this.categoryModelObj.getCategoryListing()
+            let reqBody = req.body
+            let response_dataset = {}
+            const categoryObj = await this.categoryModelObj.getCategoryListing(reqBody)
+            let totalCategoryCount = await this.categoryModelObj.getCategoryListingTotalCount(reqBody)
             if (categoryObj.length > 0) {
-                global.Helpers.successStatusBuild(res, categoryObj)
+                response_dataset.response = categoryObj
+                response_dataset.total_count = totalCategoryCount[0].totalCategoryCount
+                global.Helpers.successStatusBuild(res, response_dataset)
             }
             else {
-                global.Helpers.badRequestStatusBuild(res, 'No category found')
+                response_dataset.response = {}
+                response_dataset.total_count = 0
+                global.Helpers.successStatusBuild(res, response_dataset)
             }
         }
         catch (e) {
@@ -26,7 +33,7 @@ module.exports = class categoryController {
             const category_insert_obj = {
                 category_name : category_name,
                 parent_id : parent_id,
-                level : level,
+                // level : level,
                 fk_user_id : user_id,
                 status : 'active',
                 is_delete : '0'
@@ -34,7 +41,8 @@ module.exports = class categoryController {
 
             const addCategory = await this.categoryModelObj.addNewRecord(category_insert_obj)
             if (addCategory) {
-                global.Helpers.successStatusBuild(res, addCategory)
+                addCategory.parent_category_id = addCategory.parent_id
+                global.Helpers.successStatusBuild(res, addCategory, 'Category added successfully!')
             }
             else {
                 global.Helpers.badRequestStatusBuild(res, 'some error occurred!')    
@@ -72,7 +80,7 @@ module.exports = class categoryController {
                             var categoryInsertObj = {
                                 category_name : categoryName,
                                 parent_id : 0,
-                                level : 0,
+                                // level : 0,
                                 fk_user_id : 0
                             }
                         }
@@ -82,7 +90,7 @@ module.exports = class categoryController {
                                 var categoryInsertObj = {
                                     category_name : categoryName,
                                     parent_id : checkForParentCategory.category_id,
-                                    level : checkForParentCategory.level + 1,
+                                    // level : checkForParentCategory.level + 1,
                                     fk_user_id : 0
                                 }
                             }
@@ -90,7 +98,7 @@ module.exports = class categoryController {
                                 var categoryInsertObj = {
                                     category_name : categoryName,
                                     parent_id : 0,
-                                    level : 0,
+                                    // level : 0,
                                     fk_user_id : 0
                                 }
                             }
@@ -140,7 +148,7 @@ module.exports = class categoryController {
                 const updateObj = {
                     category_name : category_name,
                     parent_id : parent_id,
-                    level : level,
+                    // level : level,
                     updated_timestamp : updatedDate
                 }
                 let updateCategory = await this.categoryModelObj.updateAnyRecord(updateObj, {where : {category_id : category_id}})

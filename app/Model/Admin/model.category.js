@@ -55,8 +55,26 @@ class categoryModel extends Model {
         )
     }
 
-    getCategoryListing = async() => {
-        let sql = "SELECT c1.category_id, c1.category_name, c1.level, c1.status, DATE_FORMAT(c1.added_timestamp, '%D %b, %Y') AS added_timestamp, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id"
+    getCategoryListing = async(data) => {
+        let limit = data.rows
+        let offset = data.first
+        let sql = "SELECT c1.category_id, c1.category_name, c1.level, c1.status, DATE_FORMAT(c1.added_timestamp, '%D %b, %Y') AS added_timestamp, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id WHERE c1.is_delete = '0' ORDER BY c1.category_id DESC LIMIT " + limit + " OFFSET " + offset
+
+        return new Promise((resolve, reject) => {
+            this.connectionObj.sequelize.query(sql, {
+                type: this.connectionObj.sequelize.QueryTypes.SELECT
+            }).then((data) => {
+                resolve(data);
+            }).catch(error => {
+                reject(error);
+            });
+        });
+    }
+
+    getCategoryListingTotalCount = async(data) => {
+        let limit = data.rows
+        let offset = data.first
+        let sql = "SELECT COUNT(c1.category_id) AS totalCategoryCount FROM int_category as c1 WHERE is_delete = '0' "
 
         return new Promise((resolve, reject) => {
             this.connectionObj.sequelize.query(sql, {

@@ -10,8 +10,14 @@ require('dotenv').config();
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Adjust methods as needed
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Adjust headers as needed
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Add more methods if needed
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Add more headers if needed
+  
+    // Handle preflight request
+    if (req.method === 'OPTIONS') {
+      return res.status(200).end();
+    }
+  
     next();
   });
 

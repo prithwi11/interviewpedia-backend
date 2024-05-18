@@ -49,6 +49,7 @@ module.exports = {
     HTTP_RESPONSE_NOT_ACCEPTABLE: 406,
     HTTP_RESPONSE_UPGRADE_REQUIRED: 426,
     HTTP_RESPONSE_TEMPORARY_REDIRECT: 307,
+    HTTP_RESPONSE_SOME_ERROR_OCCURRED : 500,
     LOG_API_BASE_URL: 'http://localhost:3300/',
     TRANSACTION_API_BASE_URL: 'http://localhost:3500/',
     ORDER_API_BASE_URL: process.env.order_api_base_url,

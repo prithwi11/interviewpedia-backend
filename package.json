@@ -19,10 +19,16 @@
   "homepage": "https://github.com/prithwi11/interviewpedia-backend#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "csvtojson": "^2.0.10",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-validator": "^7.0.1",
+    "formidable": "^3.5.1",
     "fs": "^0.0.1-security",
+    "moment-timezone": "^0.5.45",
+    "multer": "^1.4.5-lts.1",
+    "multiparty": "^4.2.3",
     "mysql2": "^3.9.7",
     "nodemon": "^3.1.0",
     "sequelize": "^6.37.3"

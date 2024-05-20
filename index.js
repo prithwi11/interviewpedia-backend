@@ -1,12 +1,23 @@
 const express = require('express')
 const app = express()
-app.use(express.json())
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended : true
+}))
+// app.use(express.json())
 require('dotenv').config();
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Adjust methods as needed
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Adjust headers as needed
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Add more methods if needed
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Add more headers if needed
+  
+    // Handle preflight request
+    if (req.method === 'OPTIONS') {
+      return res.status(200).end();
+    }
+  
     next();
   });
 
@@ -24,6 +35,8 @@ global.Helpers = new CommonFunction()
 
 let userManagement = require('./routes/Admin/userManagement')
 app.use('/api/v1/user', userManagement)
+let category = require('./routes/Admin/category')
+app.use('/api/v1/category', category)
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on http://localhost:${process.env.PORT}`)

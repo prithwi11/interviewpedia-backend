@@ -79,7 +79,6 @@ class questionModel extends Model {
     getQuestionList = async(data) => {
         const assocWithCategoryQuestionMapping = this.assocWithCategoryQuestionMapping()
         const associateWithCategory = assocWithCategoryQuestionMapping.assocWithCategory()
-        console.log('assocWithCategory', associateWithCategory.Model)
 
         return this.Model.findAll({
             attributes : ['question_id', 'question_text', 'answer_text', 'status', 'added_timestamp'],
@@ -89,6 +88,29 @@ class questionModel extends Model {
             order : [
                 ['question_id', 'DESC']
             ],
+            include : {
+                model : assocWithCategoryQuestionMapping.Model,
+                attributes : ['category_question_mapping_id', 'fk_category_id', 'fk_question_id'],
+                include : {
+                    model : associateWithCategory.Model,
+                    attributes : ['category_id', 'category_name'],
+                    where : {
+                        is_delete : '0',
+                    },
+                }
+            }
+        })
+    }
+
+    getQuestionRecordById = async(question_id) => {
+        const assocWithCategoryQuestionMapping = this.assocWithCategoryQuestionMapping()
+        const associateWithCategory = assocWithCategoryQuestionMapping.assocWithCategory()
+        return this.Model.findOne({
+            attributes : ['question_id', 'question_text', 'answer_text', 'status', 'added_timestamp'],
+            where : {
+                is_delete : '0',
+                question_id : question_id
+            },
             include : {
                 model : assocWithCategoryQuestionMapping.Model,
                 attributes : ['category_question_mapping_id', 'fk_category_id', 'fk_question_id'],

@@ -20,16 +20,18 @@ module.exports = class validatorCls {
         ]
     }
 
-    editCategoryValidationRule() {
+    editQuestionValidationRule() {
         return [
-            this.check('category_id').trim().not().isEmpty().withMessage('Please provide category id'),
+            this.check('question_id').trim().not().isEmpty().withMessage('Please provide question id'),
         ]
     }
-    updateCategoryValidationRule() {
+    updateQuestionValidationRule() {
         return [
-            this.check('category_name').trim().not().isEmpty().withMessage('Please provide category name'),
-            this.check('parent_id').trim().not().isEmpty().withMessage('Please provide parent_id'),
-            this.check('category_id').trim().not().isEmpty().withMessage('Please provide category id'),
+            this.check('question_id').trim().not().isEmpty().withMessage('Please provide question id'),
+            this.check('question_text').trim().not().isEmpty().withMessage('Please provide question'),
+            this.check('answer_text').trim().not().isEmpty().withMessage('Please provide answer'),
+            this.check('category_id').trim().not().isEmpty().withMessage('Please provide category'),
+            this.check('user_id').trim().not().isEmpty().withMessage('Please provide user_id').isNumeric().withMessage('user_id must be numeric'),
         ]
     }
 
@@ -40,9 +42,9 @@ module.exports = class validatorCls {
         ]
     }
 
-    deleteCategoryValidationRule() {
+    deleteQuestionValidationRule() {
         return [
-            this.check('category_id').trim().not().isEmpty().withMessage('Please provide category id'),
+            this.check('question_id').trim().not().isEmpty().withMessage('Please provide question id'),
         ]
     }
 }

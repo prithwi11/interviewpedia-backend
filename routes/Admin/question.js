@@ -23,4 +23,19 @@ middlewares = [
 router.route('/question-add')
     .post(middlewares, this.questionControllerObj.insertQuestion)
 
+middlewares = [
+    questionMiddlewareObj.editQuestionValidationRule(),
+    commonMiddlewareObj.checkforerrors
+]
+router.route('/question-edit')
+    .post(this.questionControllerObj.getQuestionAgainstID)
+
+middlewares = [
+    questionMiddlewareObj.updateQuestionValidationRule(),
+    commonMiddlewareObj.checkforerrors
+]
+router.route('/question-update')
+    .post(middlewares, this.questionControllerObj.updateQuestion)
+
+
 module.exports = router

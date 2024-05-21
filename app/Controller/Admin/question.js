@@ -73,4 +73,79 @@ module.exports = class questionController {
             global.Helpers.badRequestStatusBuild(res, 'Some error occurred.')
         }
     }
+
+    getQuestionAgainstID = async(req, res) => {
+        try {
+            const question_id = req.body.question_id
+            const get_question = await this.questionModelObj.getQuestionRecordById(question_id)
+            if (get_question) {
+                global.Helpers.successStatusBuild(res, get_question)
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'Some error occurred.')
+            }
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
+        }
+    }
+
+    updateQuestion = async(req, res) => {
+        try {
+            let question_id = req.body.question_id
+            let question_text = req.body.question_text
+            let answer_text = req.body.answer_text
+            let category_id = req.body.category_id
+            let status = req.body.status
+
+            let updateQuestionConditionObj = {
+                where : {
+                    question_id : question_id
+                }
+            }
+
+            let questionObj = await this.questionModelObj.findByAny({question_id : question_id})
+            if (questionObj) {
+                let updateQuestionObj = {
+                    question_text : question_text,
+                    answer_text : answer_text,
+                    status : status,
+                }
+    
+    
+                let updateQuestion = await this.questionModelObj.updateAnyRecord(updateQuestionObj, updateQuestionConditionObj)
+    
+                if (updateQuestion) {
+                    let questionMapCondObj = {
+                        where : {
+                            category_question_mapping_id : questionObj.fk_category_question_mapping_id
+                        }
+                    }
+
+                    let questionMapUpdateObj = {
+                        fk_category_id : category_id
+                    }
+                    let updateQuestionMap = await this.category_question_mappingModelObj.updateAnyRecord(questionMapUpdateObj, questionMapCondObj)
+
+                    if (updateQuestionMap) {
+                        global.Helpers.successStatusBuild(res, "Question updated successfully.")
+                    }
+                    else {
+                        global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
+                    }
+                }
+                else {
+                    global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
+                }
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'No Question set found.')
+            }
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
+        }
+    }
 }

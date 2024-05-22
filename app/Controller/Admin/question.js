@@ -148,4 +148,27 @@ module.exports = class questionController {
             global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
         }
     }
+
+    deleteQuestion = async(req, res) => {
+        try {
+            let question_id = req.body.question_id
+            let questionObj = await this.questionModelObj.findByAny({question_id : question_id})
+            if (questionObj) {
+                let deleteQuestion = await this.questionModelObj.deleteByAny({question_id : question_id})
+                if (deleteQuestion) {
+                    global.Helpers.successStatusBuild(res, "Question deleted successfully.")
+                }
+                else {
+                    global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
+                }
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'No Question set found.')
+            }
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, "Some error occurred.")
+        }
+    }
 }

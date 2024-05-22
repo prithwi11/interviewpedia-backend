@@ -38,4 +38,11 @@ router.route('/question-update')
     .post(middlewares, this.questionControllerObj.updateQuestion)
 
 
+middlewares = [
+    questionMiddlewareObj.editQuestionValidationRule(),
+    commonMiddlewareObj.checkforerrors
+]
+router.route('/question-delete')
+    .post(this.questionControllerObj.deleteQuestion)
+
 module.exports = router

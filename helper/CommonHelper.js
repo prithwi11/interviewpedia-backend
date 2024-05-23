@@ -2,7 +2,7 @@ const { resolve } = require('path');
 
 const commonFunc = class CommonCls {
 	constructor() {
-		// this.jwt = require('jsonwebtoken');
+		this.jwt = require('jsonwebtoken');
 		this.bcrypt = require('bcrypt');
 		// const Cryptr = require('cryptr');		
 		// const util = require('util');

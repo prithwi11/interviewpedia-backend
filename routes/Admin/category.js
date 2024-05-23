@@ -13,6 +13,7 @@ let commonMiddlewareObj = new commonMiddleware()
 let middlewares = []
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     categoryMiddlewareObj.getCategoryListValidationRule(),
     commonMiddlewareObj.checkforerrors
 ]
@@ -22,6 +23,7 @@ router.route('/category-list')
 
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     categoryMiddlewareObj.addCategoryValidationRule(),
     commonMiddlewareObj.checkforerrors
 ]
@@ -29,6 +31,7 @@ router.route('/category-add')
     .post(middlewares, this.categoryControllerObj.category_add)
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     commonMiddlewareObj.validateFormData,
 ]
 router.route('/category-add-csv')
@@ -36,6 +39,7 @@ router.route('/category-add-csv')
 
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     categoryMiddlewareObj.editCategoryValidationRule(),
     commonMiddlewareObj.checkforerrors
 ]
@@ -44,6 +48,7 @@ router.route('/category-edit')
 
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     categoryMiddlewareObj.updateCategoryValidationRule(),
     commonMiddlewareObj.checkforerrors
 ]
@@ -52,6 +57,7 @@ router.route('/category-update')
 
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     categoryMiddlewareObj.campaignStatusChangeValidationRule(),
     commonMiddlewareObj.checkforerrors
 ]
@@ -60,6 +66,7 @@ router.route('/category-status-change')
 
 
 middlewares = [
+    commonMiddlewareObj.validateToken,
     categoryMiddlewareObj.deleteCategoryValidationRule(),
     commonMiddlewareObj.checkforerrors
 ]

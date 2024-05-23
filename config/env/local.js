@@ -6,7 +6,7 @@ module.exports = {
     refreshTokenKey: process.env.REFRESH_TOKEN_KEY,
     accessTokenKey: process.env.ACCESS_TOKEN_KEY,
     jwtAlgorithm: process.env.JWT_ALGORITHM,
-    accessTokenExpire: '3600s', // 60 Min
+    accessTokenExpire: '86400s', // 60 Min
     refreshTokenExpire: '3600s', // 60 Min
     // THIS IS USED TO SET THE EXPIRY TIME OF ACCESS AND REFRESH TOKEN IN DATABASE, VALUE MUST BE EQUIVALENT OF ABOVE TWO, IN SECONDS.
     accessToken_DB_expTime: '3600', // SHOULD ALWAYS BE IN SECONDS

@@ -23,7 +23,19 @@ module.exports = class userManagementController {
             if (user) {
                 const comparePassword = await global.Helpers.comparePassword(password, user.password)
                 if (comparePassword) {
-                    global.Helpers.successStatusBuild(res, 'Login successfully', user)
+                    let userDetails = {
+                        user_id : user.user_id,
+                        first_name : user.first_name,
+                        last_name : user.last_name,
+                        email : user.email,
+                        password : user.password,
+                        user_type : user.user_type,
+                        status : user.status
+
+                    }
+                    let token = await global.Helpers.createToken(userDetails);
+                    userDetails.token = token
+                    global.Helpers.successStatusBuild(res, 'Login successfully', userDetails)
                 }
                 else {
                     global.Helpers.badRequestStatusBuild(res, 'Invalid password')    

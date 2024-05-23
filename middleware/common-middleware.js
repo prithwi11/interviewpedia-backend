@@ -85,4 +85,32 @@ module.exports = class ValidatorCls {
             next();
         }
     }
+
+    validateToken = async (req, res, next) => {
+        let token = req.headers['authorization'];
+        if (token) {
+            if (token.startsWith('Bearer ') || token.startsWith('bearer ')) {
+                // Remove Bearer from string
+                token = token.slice(7, token.length);
+            }
+
+            // decode token
+            if (token) {
+                global.Helpers.verifyToken(token)
+                    .then(async jwtDecres => {
+                        //Decryption Of User_id From LoginDetails
+                        // let user_id = await global.Helpers.decryptId(jwtDecres.user_id);
+                        // jwtDecres.user_id = user_id;
+                        req.body.loginDetails = jwtDecres;
+                        next();
+                    }).catch(async err => {
+                        global.Helpers.forbiddenStatusBuild(res, 'Invalid Token. Access Forbidden.');
+                    });
+            } else {
+                global.Helpers.forbiddenStatusBuild(res, 'Invalid Token. Access Forbidden.');
+            }
+        } else {
+            global.Helpers.forbiddenStatusBuild(res, 'Invalid Token. Access Forbidden.');
+        }
+    }
 }

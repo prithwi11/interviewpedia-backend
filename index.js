@@ -37,6 +37,8 @@ let userManagement = require('./routes/Admin/userManagement')
 app.use('/api/v1/user', userManagement)
 let category = require('./routes/Admin/category')
 app.use('/api/v1/category', category)
+let question = require('./routes/Admin/question')
+app.use('/api/v1/question', question)
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on http://localhost:${process.env.PORT}`)

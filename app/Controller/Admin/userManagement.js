@@ -35,7 +35,7 @@ module.exports = class userManagementController {
                     }
                     let token = await global.Helpers.createToken(userDetails);
                     userDetails.token = token
-                    global.Helpers.successStatusBuild(res, 'Login successfully', userDetails)
+                    global.Helpers.successStatusBuild(res, userDetails, 'Login successfully')
                 }
                 else {
                     global.Helpers.badRequestStatusBuild(res, 'Invalid password')    

@@ -58,7 +58,10 @@ class categoryModel extends Model {
     getCategoryListing = async(data) => {
         let limit = data.rows
         let offset = data.first
-        let sql = "SELECT c1.category_id, c1.category_name, c1.level, c1.status, DATE_FORMAT(c1.added_timestamp, '%D %b, %Y') AS added_timestamp, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id WHERE c1.is_delete = '0' ORDER BY c1.category_id DESC LIMIT " + limit + " OFFSET " + offset
+        let sql = "SELECT c1.category_id, c1.image_url, c1.category_name, c1.level, c1.status, DATE_FORMAT(c1.added_timestamp, '%D %b, %Y') AS added_timestamp, c2.category_name AS parent_category_name, c2.category_id as parent_category_id FROM int_category c1 LEFT JOIN int_category c2 ON c1.parent_id = c2.category_id WHERE c1.is_delete = '0' ORDER BY c1.category_id DESC "
+        if (data.rows) {
+            sql += " LIMIT " + limit + " OFFSET " + offset
+        }
 
         return new Promise((resolve, reject) => {
             this.connectionObj.sequelize.query(sql, {
@@ -85,6 +88,26 @@ class categoryModel extends Model {
                 reject(error);
             });
         });
+    }
+
+    getChildCategoryAgaianstCategoryId = async(data) => {
+        return this.Model.findAll({
+            attributes : ['category_id', 'category_name', 'image_url'],
+            where : {
+                is_delete : '0',
+                parent_id : data.parent_id
+            }
+        })
+    }
+
+    getCategoryDetails = async(data) => {
+        return this.Model.findOne({
+            attributes : ['category_id', 'category_name', 'image_url', 'level', 'parent_id'],
+            where : {
+                is_delete : '0',
+                category_id : data.parent_id
+            }
+        })
     }
 }
 

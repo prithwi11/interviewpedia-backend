@@ -18,4 +18,21 @@ module.exports = class homeController {
             global.Helpers.badRequestStatusBuild(res, 'Some error occurred.')
         }
     }
+
+    getCategoryDetails = async(req, res) => {
+        try {
+            const questionList = await this.questionModelObj.getQuestionAgainstCategory(req.body)
+            const categoryList = await this.categoryModelObj.getChildCategoryAgaianstCategoryId(req.body)
+            const categoryDetails = await this.categoryModelObj.getCategoryDetails(req.body)
+            const dataset = {}
+            dataset.question_list = questionList
+            dataset.category_list = categoryList
+            dataset.category_details = categoryDetails
+            global.Helpers.successStatusBuild(res, dataset, 'Question list fetched successfully.')
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, 'Some error occurred.')
+        }
+    }
 }

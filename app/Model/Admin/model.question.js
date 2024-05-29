@@ -117,7 +117,7 @@ class questionModel extends Model {
         })
     }
 
-    getQuestionAgainstCategory = async(category_id) => {
+    getQuestionAgainstCategory = async(data) => {
         const assocWithCategoryQuestionMapping = this.assocWithCategoryQuestionMapping()
         return this.Model.findAll({
             attributes : ['question_id', 'question_text', 'answer_text', 'status', 'added_timestamp'],
@@ -128,7 +128,7 @@ class questionModel extends Model {
                 model : assocWithCategoryQuestionMapping.Model,
                 attributes : ['fk_category_id', 'fk_question_id'],
                 where : {
-                    fk_category_id : category_id
+                    fk_category_id : data.parent_id
                 }
             }
         })

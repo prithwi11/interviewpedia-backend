@@ -1197,5 +1197,44 @@ const commonFunc = class CommonCls {
 		return diff_time;
 	}
 
+	generateRandomNumber = () => {
+		const min = 100000;
+		const max = 999999;
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	sendEmail = async(email, message, subject) => {
+		const nodemailer = require('nodemailer');
+
+		let transporter = nodemailer.createTransport({
+			service: 'gmail',
+			auth: {
+				user: process.env.GMAIL_APP_USERNAME, // Your email address
+				pass: process.env.GMAIL_APP_PASSWORD // Your email password
+			}
+		});
+
+		let mailOptions = {
+			from: `"InterviewPedia" ${process.env.GMAIL_APP_USERNAME}`, // Sender address
+			to: email, // List of recipients
+			subject: subject, // Subject line
+			text: message, // Plain text body
+			// html: '<b>Hello world?</b>' // HTML body
+		};
+		
+		return new Promise((resolve, reject) => {
+			transporter.sendMail(mailOptions, (error, info) => {
+			  if (error) {
+				reject(error);
+				return console.log(error);
+			  }
+			  console.log('Message sent: %s', info.messageId);
+			  console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+			  resolve(true); // Resolve the promise with success
+			});
+		});
+
+	}
+
 }
 module.exports = commonFunc;

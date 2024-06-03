@@ -37,13 +37,17 @@ let userManagement = require('./routes/Admin/userManagement')
 let question = require('./routes/Admin/question')
 let category = require('./routes/Admin/category')
 let home = require('./routes/User/home')
-let categoryUser = require('./routes/User/category')
 
-app.use('/api/v1/user', userManagement)
+let categoryUser = require('./routes/User/category')
+const user = require('./routes/User/user')
+
+app.use('/api/v1/admin', userManagement)
 app.use('/api/v1/category', category)
 app.use('/api/v1/question', question)
 app.use('/api/v1/home', home)
+
 app.use('/api/v1/user/category', categoryUser)
+app.use('/api/v1/user/', user)
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on http://localhost:${process.env.PORT}`)

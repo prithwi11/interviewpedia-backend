@@ -83,7 +83,7 @@ module.exports = class userManagementController {
                         user_type : userType,
                     }
                     const insertUser = await this.userManagementModelObj.addNewRecord(insertObj)
-                    global.Helpers.successStatusBuild(res, 'User added successfully', insertUser)
+                    global.Helpers.successStatusBuild(res, insertUser, 'User added successfully', )
                 }
             }
             catch (e) {
@@ -156,7 +156,7 @@ module.exports = class userManagementController {
                 if (checkVerification) {
 
                     const updateVerification = await this.otpManagementModelObj.updateAnyRecord({status : 'verified'}, {where : {fk_user_id : userId}})
-                    const updateUser = await this.userManagementModelObj.updateAnyRecord({is_verified : 1}, {where : {user_id : userId}})
+                    const updateUser = await this.userManagementModelObj.updateAnyRecord({is_verified : '1'}, {where : {user_id : userId}})
                     if (updateVerification && updateUser) {
                         global.Helpers.successStatusBuild(res, 'Verification successful!')
                     }
@@ -185,12 +185,17 @@ module.exports = class userManagementController {
             if (checkUserExists) {
                 const checkPassword = global.Helpers.comparePassword(password, checkUserExists.password)
                 if (checkPassword) {
-                    if (checkUserExists.is_verified !== 1) {
+                    if (checkUserExists.is_verified !== '1') {
                         global.Helpers.badRequestStatusBuild(res, 'Please verify your account!', checkUserExists)
                     }
                     else {
-                        const token = global.Helpers.createToken(checkUserExists)
-                        global.Helpers.successStatusBuild(res, 'Login successful!', {token : token, user : checkUserExists})
+                        let userDetails = {
+                            user_id : checkUserExists.user_id,
+                            email : checkUserExists.email,
+                            
+                        }
+                        const token = global.Helpers.createToken(userDetails)
+                        global.Helpers.successStatusBuild(res, {token : token, user : checkUserExists} , 'Login successful!' )
                     }
                 }
                 else {

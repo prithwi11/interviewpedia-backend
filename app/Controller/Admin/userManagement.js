@@ -2,6 +2,9 @@ module.exports = class userManagementController {
     constructor() {
         const userManagementModel = require('../../Model/Admin/model.user-management')
         this.userManagementModelObj = new userManagementModel()
+
+        const otpManagementModel = require('../../Model/Admin/model.otp.management')
+        this.otpManagementModelObj = new otpManagementModel()
     }
 
     /**
@@ -59,8 +62,6 @@ module.exports = class userManagementController {
 
     addNewUser = async(req, res) => {
         try {
-            const firstName = req.body.firstName
-            const lastName = req.body.lastName
             const email = req.body.email
             const password = await global.Helpers.hashPassword(req.body.password)
             const userType = req.body.userType
@@ -77,15 +78,12 @@ module.exports = class userManagementController {
                 }
                 else {
                     const insertObj = {
-                        first_name : firstName,
-                        last_name : lastName,
                         email : email,
                         password : password,
                         user_type : userType,
                     }
-        
                     const insertUser = await this.userManagementModelObj.addNewRecord(insertObj)
-                    global.Helpers.successStatusBuild(res, 'User added successfully', insertUser)
+                    global.Helpers.successStatusBuild(res, insertUser, 'User added successfully', )
                 }
             }
             catch (e) {
@@ -93,6 +91,120 @@ module.exports = class userManagementController {
                 global.Helpers.badRequestStatusBuild(res, 'Some error occurred!')
             }
                     
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, 'Some error occured!')
+        }
+    }
+
+    createVerification = async(req, res) => {
+        try {
+            let email = req.body.email
+            let userId = req.body.userId
+            let verificationCode = global.Helpers.generateRandomNumber()
+
+            const checkUser = await this.userManagementModelObj.findByAnyOne({where : {email : email, status : 'active'}})
+            if (checkUser) {    
+                const subject = "Verification Code for Sign up"
+                const message = "Your verification code is : " + verificationCode
+
+                const sendEmail = await global.Helpers.sendEmail(email, message, subject)
+                if (sendEmail) {
+                    const verificationObj = {
+                        verification_code : verificationCode,
+                        fk_user_id : userId,
+                        status : 'pending'
+                    }
+
+                    const checkVerification = await this.otpManagementModelObj.findByAnyOne({where : {fk_user_id : userId}})
+                    if (checkVerification) {
+                        if (checkVerification.status == 'verified') {
+                            global.Helpers.badRequestStatusBuild(res, 'User already verified')
+                        }
+                        else {
+                            const updateVerification = await this.otpManagementModelObj.updateAnyRecord(verificationObj, {where : {fk_user_id : userId}})
+                            
+                            const updateUser = await this.userManagementModelObj.updateAnyRecord({is_verified : 0}, {where : {userId : userId}})
+                        }
+                    }
+                    else {
+                        const insertVerification = await this.otpManagementModelObj.addNewRecord(verificationObj)
+                    }
+                    global.Helpers.successStatusBuild(res, userId, 'Verification code sent successfully')
+                }
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'User not found!')
+            }
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, 'Some error occured!')
+        }
+    }
+
+    checkVerification = async(req,res) => {
+        try {
+            const verificationCode = req.body.verificationCode
+            const userId = req.body.userId
+            
+            const checkUserExists = await this.userManagementModelObj.findByAnyOne({where : {user_id : userId}})
+            if (checkUserExists) {
+                const checkVerification = await this.otpManagementModelObj.findByAnyOne({where : {fk_user_id : userId, verification_code : verificationCode}})
+
+                if (checkVerification) {
+
+                    const updateVerification = await this.otpManagementModelObj.updateAnyRecord({status : 'verified'}, {where : {fk_user_id : userId}})
+                    const updateUser = await this.userManagementModelObj.updateAnyRecord({is_verified : '1'}, {where : {user_id : userId}})
+                    if (updateVerification && updateUser) {
+                        global.Helpers.successStatusBuild(res, 'Verification successful!')
+                    }
+                    else {
+                        global.Helpers.badRequestStatusBuild(res, 'Some error occurred!')
+                    }
+                }
+                else {
+                    global.Helpers.badRequestStatusBuild(res, 'Verification code is not valid!')
+                }
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'User not found!')
+            }
+        }
+        catch (e) {
+            console.log(e)
+            global.Helpers.badRequestStatusBuild(res, 'Some error occured!')
+        }
+    }
+
+    loginUser = async(req, res) => {
+        try {
+            const {email, password} = req.body
+            const checkUserExists = await this.userManagementModelObj.findByAnyOne({where : {email : email}})
+            if (checkUserExists) {
+                const checkPassword = global.Helpers.comparePassword(password, checkUserExists.password)
+                if (checkPassword) {
+                    if (checkUserExists.is_verified !== '1') {
+                        global.Helpers.badRequestStatusBuild(res, 'Please verify your account!', checkUserExists)
+                    }
+                    else {
+                        let userDetails = {
+                            user_id : checkUserExists.user_id,
+                            email : checkUserExists.email,
+                            
+                        }
+                        const token = global.Helpers.createToken(userDetails)
+                        global.Helpers.successStatusBuild(res, {token : token, user : checkUserExists} , 'Login successful!' )
+                    }
+                }
+                else {
+                    global.Helpers.badRequestStatusBuild(res, 'Password is not valid!', checkUserExists)
+                }
+            }
+            else {
+                global.Helpers.badRequestStatusBuild(res, 'User not found!')
+            }
         }
         catch (e) {
             console.log(e)

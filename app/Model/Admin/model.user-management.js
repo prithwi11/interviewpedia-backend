@@ -31,6 +31,11 @@ class userManagementModel extends Model {
                 status : {
                     type : DataTypes.ENUM,
                     values : ['active', 'inactive', 'deleted']
+                },
+                is_verified : {
+                    type : DataTypes.ENUM,
+                    values : ['0', '1'],
+                    defaultValue : '0',                    
                 }
             },
             {

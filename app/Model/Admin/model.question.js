@@ -17,10 +17,6 @@ class questionModel extends Model {
                         notEmpty : {
                             msg : 'Question text cannot be empty'
                         },
-                        len : {
-                            args : [3, 100],
-                            msg : 'Question text must be between 3 and 100 characters',
-                        },
                     },
                 },
                 answer_text : {
@@ -29,10 +25,6 @@ class questionModel extends Model {
                     validate : {
                         notEmpty : {
                             msg : 'Answer text cannot be empty'
-                        },
-                        len : {
-                            args : [3, 10000],
-                            msg : 'Answer text must be between 3 and 100 characters',
                         },
                     },
                 },
@@ -120,6 +112,23 @@ class questionModel extends Model {
                     where : {
                         is_delete : '0',
                     },
+                }
+            }
+        })
+    }
+
+    getQuestionAgainstCategory = async(data) => {
+        const assocWithCategoryQuestionMapping = this.assocWithCategoryQuestionMapping()
+        return this.Model.findAll({
+            attributes : ['question_id', 'question_text', 'answer_text', 'status', 'added_timestamp'],
+            where : {
+                is_delete : '0',
+            },
+            include : {
+                model : assocWithCategoryQuestionMapping.Model,
+                attributes : ['fk_category_id', 'fk_question_id'],
+                where : {
+                    fk_category_id : data.parent_id
                 }
             }
         })

@@ -4,6 +4,9 @@ let router = express.Router()
 let userManagementController = require('../../app/Controller/Admin/userManagement')
 this.userManagementControllerObj = new userManagementController()
 
+let userController = require('../../app/Controller/User/user')
+this.userControllerObj = new userController()
+
 let userManagementMiddleware = require('../../middleware/Admin/user-management-middleware')
 this.userManagementMiddlewareObj = new userManagementMiddleware()
 
@@ -29,5 +32,8 @@ router.route('/create-verification')
 
 router.route('/check-verification')
     .post(this.userManagementControllerObj.checkVerification)
+
+router.route('/edit-view')
+    .post(this.userControllerObj.getUserAllDetails)
 
 module.exports = router
